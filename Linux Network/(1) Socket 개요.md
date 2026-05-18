@@ -290,7 +290,7 @@ int main() {
 
 <br/>
 
-### i. Server Socket 종료
+### i. Server Socket 종료 시점
 1. `socket()` 실패했을 때
 ```C
 server_sock = socket(AF_INET, SOCK_STREAM, 0);
@@ -337,7 +337,7 @@ void interrupt(int arg) {
 }
 ```
 
-### ii. Server의 Client Socket 종료
+### ii. Server의 Client Socket 종료 시점
 1. Client의 접속이 끊어졌을 때
 ```C
 int len = read(client_sock, buf, 99);
@@ -361,11 +361,11 @@ if (!strcmp("exit", buf)){
 ```C
 void interrupt(int arg){
     close(client_sock);
-    exit(1)
+    exit(1);
 }
 ```
 
-### iii. Client Socket 종료
+### iii. Client Socket 종료 시점
 1. `socket()` 실패
 ```C
 client_sock = socket(AF_INET, SOCK_STREAM, 0);
