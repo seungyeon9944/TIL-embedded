@@ -490,4 +490,5 @@ ISO에서 정한, 통신의 추상화 단계
 - 스위치
     - MAC 기반으로 통신 데이터 전달
 
+
 ![네트워크 구성](https://i.imgur.com/I2zKFtL.png)
